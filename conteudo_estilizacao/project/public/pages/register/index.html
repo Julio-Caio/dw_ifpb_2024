@@ -17,6 +17,8 @@
     />
     <link href="../../dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../styles/navbar/style.css" />
+    <link rel="stylesheet" href="../styles/footer/style.css" />
   </head>
 
   <body>
@@ -24,7 +26,7 @@
       <nav class="navbar navbar-expand-lg bg-dark">
         <div class="container-fluid">
           <a
-            class="navbar-brand text-light"
+            class="navbar-brand text-light text-decoration-none"
             href="../../pages/homepage/index.html"
             ><img
               src="../images/logo/logo_sipwave.png"
@@ -59,16 +61,12 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="/my-domains">Domains</a>
+                <a class="nav-link" href="../domain_sip/index.html">Domains</a>
               </li>
             </ul>
 
-            <span class="navbar-item">
-              <a
-                class="nav-link btn btn-primary text-white"
-                href="../register/register.html"
-                >Login</a
-              >
+            <span class="nav-item">
+              <a class="nav-link" href="../register/register.html">Login</a>
             </span>
           </div>
         </div>
@@ -76,7 +74,7 @@
     </header>
 
     <div class="container">
-      <form class="form-signin">
+      <form class="form-signin mt-3">
         <fieldset>
           <img
             class="mb-4"
@@ -90,7 +88,7 @@
           <input
             type="text"
             name="username"
-            id="inputEmail"
+            id="inputName"
             required
             class="form-control mb-3"
             placeholder="Your Username"
@@ -129,7 +127,7 @@
 
     <footer>
       <div class="footer_markdown">
-        <p class="fs-6">
+        <p class="fs-5">
           Developed by
           <a
             href="https://linkedin/in/julio-caio-r-santos/"
@@ -140,16 +138,15 @@
         </p>
       </div>
       <div class="footer_copyright">
-        <p class="fs-6 fw-bold">&copy; SIPWave Project</p>
+        <p class="fs-5 fw-bold">&copy; SIPWave Project</p>
       </div>
       <div class="footer_ifpb">
         <div class="footer_ifpb_logo">
           <img src="../images/logo/logo_ifpb.png" alt="IFPB logo" />
-          <p class="fs-6">Instituto Federal da Paraíba</p>
+          <p class="fs-5">Instituto Federal da Paraíba</p>
         </div>
       </div>
     </footer>
-
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

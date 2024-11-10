@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SIPWave - Register</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../styles/footer/style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sankofa+Display&display=swap');
+
+    .sidebar {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+
+    .bi.bi-list {
+      font-size: 1.4em;
+    }
+
+    .sidebar a {
+      border-radius: .4em;
+      padding: 1em;
+      margin: 1.2em .6em .8em;
+      max-height: 4em;
+      max-width: 75%;
+      text-decoration: none;
+      padding: 1em 1.4em 1.2em;
+      color: #818181;
+      display: block;
+      transition: all 0.6s ease-in-out;
+    }
+
+    .sidebar a:hover {
+      background-color: #f1f1f1;
+      color: black;
+      font-weight: 600;
+    }
+
+    .sidebar span {
+      cursor: pointer;
+      color: #f1f1f1;
+    }
+
+    .sidebar .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+    #main {
+      transition: margin-left .5s;
+      padding: 16px;
+    }
+
+    .navbar-toggler {
+      border: none;
+      color: white;
+    }
+
+    .navbar-toggler:hover {
+      color: #ccc;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-smnavbar-dark bg-dark">
+    <button class="navbar-toggler" onclick="toggleSidebar()">
+      <i class="bi bi-list text-light"></i>
+    </button>
+    <a class="navbar-brand ms-3 p-2 text-light" href="../homepage/index.html">sipwave</a>
+  </nav>
+
+  <!-- Sidebar -->
+  <div id="collapseSidebar" class="sidebar">
+    <span href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">×</span>
+    <a href="../homepage/index.html">Home</a>
+    <a href="#">Domains</a>
+    <a href="../register/register.html">Login</a>
+  </div>
+  <!-- Main Content -->
+  <div class="container table-responsive p-3" id="container">
+    <!-- Button add new domain -->
+    <h1 class="mt-5 text-center fs-2 fw-bold text-light">Domains</h1>
+    <div class="d-flex justify-content-md-end mb-3">
+      <button type="button" class="btn btn-success fw-bold" data-bs-toggle="modal" data-bs-target="#Modal">
+        <i class="bi bi-plus"></i> New
+      </button>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade text-dark" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 fw-bold" id="ModalLabel">Add new domain</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form class="row">
+              <div class="col-6">
+                <label for="address-domain" class="fw-bold p-2">Address</label>
+                <input type="text" class="form-control" id="address-domain" placeholder="my-domain.com">
+              </div>
+              <div class="col-6">
+                <label for="tag" class="fw-bold p-2">Proxy SIP Server</label>
+                <input type="text" class="form-control" id="tag" placeholder="192.168.0.0">
+              </div>
+              <div class="col-6 mt-2">
+                <label for="tag" class="fw-bold p-2">Tag</label>
+                <input type="text" class="form-control" id="tag" placeholder="Some description">
+              </div>
+              <div class="col-6 mt-2">
+                <label for="tag" class="fw-bold p-2">Register Server</label>
+                <input type="text" class="form-control" id="tag" placeholder="192.168.0.0">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Table -->
+    <table class="table table-dark table-striped" style="table-layout: fixed; width: 100%;">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col" class="text-center" style="width: 15%;">#</th>
+          <th scope="col" class="text-center" style="width: 15%;">Domain</th>
+          <th scope="col" class="text-center" style="width: 15%;">Tag</th>
+          <th scope="col" class="text-center" style="width: 15%;">ProxySIP</th>
+          <th scope="col" class="text-center" style="width: 15%;">Register</th>
+          <th scope="col" class="text-center" style="width: 15%;"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" class="text-center">1</th>
+          <td class="text-center">ifpb.edu.br</td>
+          <td class="text-center">First Domain</td>
+          <td class="text-center">192.168.1.1</td>
+          <td class="text-center">Active</td>
+          <td class="text-center">
+            <i class="rounded-1 bi bi-pencil-square mx-3 bg-primary text-light p-1"></i>
+            <i class="rounded-1 bi bi-trash3-fill bg-danger text-light p-1"></i>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="text-center">2</th>
+          <td class="text-center">example.org</td>
+          <td class="text-center">Backup</td>
+          <td class="text-center">192.168.1.2</td>
+          <td class="text-center">Inactive</td>
+          <td class="text-center">
+            <i class="rounded-1 bi bi-pencil-square mx-3 bg-primary text-light p-1"></i>
+            <i class="rounded-1 bi bi-trash3-fill bg-danger text-light p-1"></i>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="text-center">3</th>
+          <td class="text-center">ftp.debian.org</td>
+          <td class="text-center">Testing</td>
+          <td class="text-center">192.168.1.3</td>
+          <td class="text-center">Active</td>
+          <td class="text-center">
+            <i class="rounded-1 bi bi-pencil-square mx-3 bg-primary text-light p-1"></i>
+            <i class="rounded-1 bi bi-trash3-fill bg-danger text-light p-1"></i>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <footer>
+    <div class="footer_markdown">
+      <p class="fs-5">
+        Developed by
+        <a href="https://linkedin/in/julio-caio-r-santos/" target="_blank" rel="noopener noreferrer">Júlio Caio
+          Rodrigues</a>
+      </p>
+    </div>
+    <div class="footer_copyright">
+      <p class="fs-5 fw-bold">&copy; SIPWave Project</p>
+    </div>
+    <div class="footer_ifpb">
+      <div class="footer_ifpb_logo">
+        <img src="../images/logo/logo_ifpb.png" alt="IFPB logo" />
+        <p class="fs-5">Instituto Federal da Paraíba</p>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

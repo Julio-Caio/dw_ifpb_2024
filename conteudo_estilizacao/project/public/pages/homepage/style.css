@@ -119,12 +119,13 @@ body::after {
 .button {
   background: linear-gradient(to right, #34d399, #14b8a6);
   color: white;
-  padding: 12px 32px;
-  border-radius: 8px;
-  font-size: 1rem;
+  padding: .45em;
+  border-radius: .25em;
   font-weight: 500;
   text-decoration: none;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: background 0.3s;
 }
 
@@ -136,17 +137,6 @@ body::after {
   padding-bottom: 96px;
 }
 
-.nav_brand {
-  max-width: 2.4em;
-  max-height: 2.4em;
-  margin-right: 1.6em;
-}
-
-.nav-item a {
-  padding-left: 1em;
-  color: var(--white-smoke);
-}
-
 .btn {
   background-color: var(--color-light-cian);
   border: 0.8px solid var(--white-smoke);
@@ -155,7 +145,7 @@ body::after {
 }
 
 .intro-section {
-  padding: 12em 4em 6em;
+  padding: 10em 4em 6em;
   min-height: 28em;
 }
 
@@ -172,7 +162,14 @@ body::after {
   background: var(--gradient-cian);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  padding: 0.4em;
+}
+
+.intro-section h1 {
+  font-size: 3.6em;
+}
+
+.intro-section h2 {
+  font-size: 4.2em;
 }
 
 .about_project {
@@ -200,29 +197,6 @@ body::after {
   padding-top: 1.4em;
 }
 
-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1em;
-  background-color: var(--color-dark-grey);
-  color: var(--white-smoke);
-}
-
-.footer_ifpb img {
-  width: 2.2em;
-  height: 3em;
-}
-
-.footer_markdown span {
-  text-decoration: underline;
-  color: var(--color-light-cian);
-}
-
-.footer_copyright p {
-  color: var(--color-light-cian);
-}
-
 @media (max-width: 768px) {
   .about_project {
     padding: 0 1em 4em;
@@ -231,9 +205,24 @@ footer {
   .about_features {
     flex-direction: column;
   }
+}
+@media (min-width: 1920px) {
+   .intro-section {
+      margin: 0 auto;
+      width: 75%;
+      padding: 14em 10em;
+   }
 
-  footer {
-    display: block;
-    text-align: center;
+   .intro-section h1{
+      font-size: 4.8em;
+   }
+
+   h2{
+    font-size: 3.2rem;
+  }
+
+  .button {
+    margin-top: 1.5em;
+    transform: scale(1.1);
   }
 }

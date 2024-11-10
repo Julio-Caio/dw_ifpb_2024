@@ -15,13 +15,15 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
     <link href="style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles/navbar/style.css" />
+    <link rel="stylesheet" href="../styles/footer/style.css" />
   </head>
   <body>
     <header>
       <nav class="navbar navbar-expand-lg bg-dark">
         <div class="container-fluid">
           <a
-            class="navbar-brand text-light"
+            class="navbar-brand text-light text-decoration-none"
             href="../../pages/homepage/index.html"
             ><img
               src="../images/logo/logo_sipwave.png"
@@ -56,54 +58,61 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="/my-domains">Domains</a>
+                <a class="nav-link" href="../domain_sip/index.html">Domains</a>
               </li>
             </ul>
-
-            <span class="navbar-item">
-              <a
-                class="nav-link btn btn-primary text-white"
-                href="../register/register.html"
-                >Login</a
-              >
+            <span class="nav-item">
+              <a class="nav-link" href="../register/index.html">Login</a>
             </span>
           </div>
         </div>
       </nav>
     </header>
     <main>
-      <section class="intro-section">
+      <section class="intro-section text-center">
         <div class="title-with-icon">
-          <i class="bi bi-telephone-outbound fs-2"></i>
           <h1>Welcome to SIPWave Project</h1>
         </div>
         <br />
-        <p class="description">
+        <!-- Ajustando o parágrafo -->
+        <p class="description fs-4 text-start" style="text-align: justify">
           SIPWave is a web application designed to facilitate the creation and
           management of SIP-based communication systems, such as IP PBX
           solutions, VoIP gateways, and conference servers.
         </p>
         <br />
-        <a href="/register" class="button">Create your account</a>
+        <div class="d-flex justify-content-center">
+          <a
+            href="/register"
+            class="button fs-4"
+            style="max-width: 12em; width: 100%; height: 3em"
+          >
+            Create your account
+          </a>
+        </div>
       </section>
+
       <hr />
       <section>
         <div class="about_project">
-          <h2 class="section-title">What&apos;s SIPWave Project</h2>
-          <p class="description of project">
+          <h2>What&apos;s SIPWave Project</h2>
+          <br>
+          <p class="fs-4">
             This project was developed for the Web Development course by
-            Computer Networks students: Júlio Caio and Camilly Souza.
+            Computer Networks students: Júlio Caio, Camilly Souza and Nelson Tulio.
           </p>
           <div class="about_features">
-            <h3>Streamline Your Communication with SIPWave</h3>
+            <h3 class="mt-5 p-5">Streamline Your Communication with SIPWave</h3>
 
             <div class="features">
               <ul>
-                <li>Create and manage your own SIP domains effortlessly</li>
-                <li>
+                <li class="fs-4">
+                  Create and manage your own SIP domains effortlessly
+                </li>
+                <li class="fs-4">
                   Monitor and manage active call queues with real-time insights
                 </li>
-                <li>
+                <li class="fs-4">
                   Initiate and manage calls between users within your SIP
                   domains
                 </li>
@@ -113,12 +122,12 @@
         </div>
       </section>
     </main>
-    <footer class="fs-5">
+    <footer>
       <div class="footer_markdown">
-        <p>
+        <p class="fs-5">
           Developed by
           <a
-            href="https://linkedin.com/in/julio-caio-r-santos/"
+            href="https://linkedin/in/julio-caio-r-santos/"
             target="_blank"
             rel="noopener noreferrer"
             >Júlio Caio Rodrigues</a
@@ -126,12 +135,12 @@
         </p>
       </div>
       <div class="footer_copyright">
-        <p>&copy; SIPWave Project</p>
+        <p class="fs-5 fw-bold">&copy; SIPWave Project</p>
       </div>
       <div class="footer_ifpb">
         <div class="footer_ifpb_logo">
           <img src="../images/logo/logo_ifpb.png" alt="IFPB logo" />
-          <p>Instituto Federal da Paraíba</p>
+          <p class="fs-5">Instituto Federal da Paraíba</p>
         </div>
       </div>
     </footer>

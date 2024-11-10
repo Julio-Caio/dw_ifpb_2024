@@ -1,0 +1,22 @@
+.nav_brand {
+  max-width: 2.4em;
+  max-height: 2.4em;
+  margin-right: 1.6em;
+}
+
+
+.nav-item a {
+  font-size: 1.6em;
+  padding: 0.8em;
+  color: var(--white-smoke);
+}
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+@media (min-width: 1920px) {
+  .nav-link {
+    font-size: 1.4em;
+    margin-left: -2%;
+  }
+}
