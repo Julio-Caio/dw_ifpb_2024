@@ -21,7 +21,7 @@ html, body {
     font-size: 1.075em;
     height: 100%;
     margin: 0;
-    background: var(--gradient-cian);
+    background: rgba(240, 238, 233, 0.952);
     padding: 0;
 }
 
@@ -68,6 +68,14 @@ footer {
   margin-top: 2.9em;
   min-height: 20%;
   padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4em;
+  background: var(--color-dark-grey);
+  color: #f5f5f5;
+  text-align: center;
+  font-size: 1.075em;
 }
 
 .footer_markdown p {

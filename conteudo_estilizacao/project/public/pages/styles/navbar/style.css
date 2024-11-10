@@ -1,15 +1,34 @@
+:root {
+  --color-light-grey: #3a3a3a42;
+  --color-dark-grey: #1a1a1a;
+  --color-light-cian: #08b1a0;
+  --font-kanit: 'Kanit', serif;
+  --white-smoke: whitesmoke;
+  --gradient-cian: linear-gradient(to right, #35978d, #1e5650);
+}
+
 .nav_brand {
   max-width: 2.4em;
   max-height: 2.4em;
   margin-right: 1.6em;
 }
 
-
 .nav-item a {
-  font-size: 1.6em;
-  padding: 0.8em;
+  font-size: 1.25em;
+  margin-left: .2em;
+  padding: 0.4em;
+  border-radius: .4em;
   color: var(--white-smoke);
+  transition: all .2s ease-in-out;
 }
+
+.nav-item:hover a {
+  text-decoration: none;
+  background: var(--white-smoke);
+  color: var(--color-dark-grey);
+  transition: all .5s ease-in-out;
+}
+
 .navbar-toggler-icon {
   filter: invert(1);
 }
@@ -19,4 +38,14 @@
     font-size: 1.4em;
     margin-left: -2%;
   }
+
+  .nav-item a {
+    font-size: 1.55em;
+    margin-left: .2em;
+    padding: 0.4em;
+    border-radius: .4em;
+    color: var(--white-smoke);
+    transition: all .2s ease-in-out;
+  }
+  
 }
