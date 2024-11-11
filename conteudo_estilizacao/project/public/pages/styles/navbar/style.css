@@ -7,6 +7,11 @@
   --gradient-cian: linear-gradient(to right, #35978d, #1e5650);
 }
 
+.nav {
+  min-height: 6em;
+  padding: 1em;
+}
+
 .nav_brand {
   max-width: 2.4em;
   max-height: 2.4em;
@@ -15,8 +20,8 @@
 
 .nav-item a {
   font-size: 1.25em;
-  margin-left: .2em;
-  padding: 0.4em;
+  margin-left: .3em;
+  padding: 0.6em;
   border-radius: .4em;
   color: var(--white-smoke);
   transition: all .2s ease-in-out;

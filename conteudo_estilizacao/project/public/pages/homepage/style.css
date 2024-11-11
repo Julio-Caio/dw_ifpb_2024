@@ -197,6 +197,10 @@ body::after {
   padding-top: 1.4em;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 @media (max-width: 768px) {
   .about_project {
     padding: 0 1em 4em;
