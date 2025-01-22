@@ -3,7 +3,7 @@
 //\==================================/\\
 
 export async function fetchApiData(input, token) {
-    const URL = `https://ipinfo.io/${input}?token=${token}`;
+    const URL = `https://api.allorigins.win/get?url=${encodeURIComponent(`https://ipinfo.io/8.8.8.8?token=${token}`)}`;
 
     try {
         const response = await fetch(URL, {
@@ -17,14 +17,15 @@ export async function fetchApiData(input, token) {
         }
 
         const data = await response.json();
-        return data;
+        const jsonData = JSON.parse(data.contents);
+        return jsonData;
     } catch (error) {
         console.error(error);
         throw new Error("Erro ao acessar a API.");
     }
 }
 
-export async function populateTable(input, token, tableBody) {
+export async function populateTable(input,token, tableBody) {
     try {
         const data = await fetchApiData(input, token);
 
