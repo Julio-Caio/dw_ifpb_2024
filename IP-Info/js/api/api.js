@@ -3,7 +3,7 @@
 //\==================================/\\
 
 export async function fetchApiData(input, token) {
-    const URL = `https://api.allorigins.win/get?url=${encodeURIComponent(`https://ipinfo.io/8.8.8.8?token=${token}`)}`;
+    const URL = `https://api.allorigins.win/get?url=${encodeURIComponent(`https://ipinfo.io/${input}?token=${token}`)}`;
 
     try {
         const response = await fetch(URL, {
