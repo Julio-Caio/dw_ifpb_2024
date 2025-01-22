@@ -4,7 +4,7 @@ import { populateTable } from "./api/api.js";
 //      DOM ELEMENTS VARIABLES
 //\==================================/\\
 
-const TOKEN = "SEU TOKEN AQUI";
+const TOKEN = "f47b802198db06";
 
 const searchButton = document.querySelector("#btnGetIp");
 const inputIpAddress = document.querySelector("#inputIpAddress");
