@@ -1,0 +1,15 @@
+@hostname = 127.0.0.1
+@port = 3000
+@host = {{hostname}}:{{port}}
+
+### Get Hello World
+
+GET http://{{host}}/ HTTP/1.1
+
+### Get Hello World in spanish
+
+GET http://{{host}}/lang/es HTTP/1.1
+
+### Get Hello World in french
+
+GET http://{{host}}/lang/pt HTTP/1.1
